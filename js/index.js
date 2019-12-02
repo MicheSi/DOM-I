@@ -42,12 +42,17 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Nav
-let nav = document.querySelector("nav");
-
+let links = document.querySelectorAll('a');
+links.forEach((link, i) => {
+  link.textContent = Object.values(siteContent.nav)[i]
+})
 
 // CTA
 let ctaImg = document.getElementById("cta-img")
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+let title = document.querySelector('h1')
+title.textContent = siteContent["cta"]["h1"]
 
 
 // Main Content

@@ -63,14 +63,28 @@ let middleImg = document.getElementById("middle-img")
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 let mainHeadings = document.querySelectorAll('h4')
+mainHeadings[0].textContent = siteContent["main-content"]["features-h4"]
+mainHeadings[1].textContent = siteContent["main-content"]["about-h4"]
+mainHeadings[2].textContent = siteContent["main-content"]["services-h4"]
+mainHeadings[3].textContent = siteContent["main-content"]["product-h4"]
+mainHeadings[4].textContent = siteContent["main-content"]["vision-h4"]
 // for (let i = 0; i < mainHeadings.length; i++) {
 //   mainHeadings[i].textContent = siteContent["main-content"][i]
 // }
 
+let mainParagraphs = document.querySelectorAll('p')
+mainParagraphs[0].textContent = siteContent["main-content"]["features-content"]
+mainParagraphs[1].textContent = siteContent["main-content"]["about-content"]
+mainParagraphs[2].textContent = siteContent["main-content"]["services-content"]
+mainParagraphs[3].textContent = siteContent["main-content"]["product-content"]
+mainParagraphs[4].textContent = siteContent["main-content"]["vision-content"]
 
 
 // Contact section
-
+mainHeadings[5].textContent = siteContent["contact"]["contact-h4"]
+mainParagraphs[5].textContent = siteContent["contact"]["address"]
+mainParagraphs[6].textContent = siteContent["contact"]["phone"]
+mainParagraphs[7].textContent = siteContent["contact"]["email"]
 
 // Footer section
 let footer = document.querySelector('footer')

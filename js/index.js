@@ -42,10 +42,27 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Nav
+
 let links = document.querySelectorAll('a');
 links.forEach((link, i) => {
   link.textContent = Object.values(siteContent.nav)[i]
+  link.style.color = "green"
 })
+
+const newLink1 = document.createElement('a')
+newLink1.textContent = "Home"
+newLink1.style.color = "green"
+
+const nav = document.querySelector("nav")
+nav.prepend(newLink1)
+
+const newLink2 = document.createElement('a')
+newLink2.textContent = "Pricing"
+newLink2.style.color = "green"
+
+nav.append(newLink2)
+
+
 
 // CTA
 let ctaImg = document.getElementById("cta-img")

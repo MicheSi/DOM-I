@@ -63,13 +63,15 @@ newLink2.style.color = "green"
 nav.append(newLink2)
 
 
-
 // CTA
 let ctaImg = document.getElementById("cta-img")
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
 let title = document.querySelector('h1')
 title.textContent = siteContent["cta"]["h1"]
+
+
+
 
 let button = document.querySelector('button')
 button.textContent = siteContent["cta"]["button"]
@@ -88,7 +90,7 @@ mainHeadings[4].textContent = siteContent["main-content"]["vision-h4"]
 // for (let i = 0; i < mainHeadings.length; i++) {
 //   mainHeadings[i].textContent = siteContent["main-content"][i]
 // }
-
+console.log(mainHeadings)
 let mainParagraphs = document.querySelectorAll('p')
 mainParagraphs[0].textContent = siteContent["main-content"]["features-content"]
 mainParagraphs[1].textContent = siteContent["main-content"]["about-content"]
@@ -102,6 +104,8 @@ mainHeadings[5].textContent = siteContent["contact"]["contact-h4"]
 mainParagraphs[5].textContent = siteContent["contact"]["address"]
 mainParagraphs[6].textContent = siteContent["contact"]["phone"]
 mainParagraphs[7].textContent = siteContent["contact"]["email"]
+
+mainParagraphs[5].style.width = "25%";
 
 // Footer section
 let footer = document.querySelector('footer')

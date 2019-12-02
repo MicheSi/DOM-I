@@ -63,9 +63,11 @@ let middleImg = document.getElementById("middle-img")
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 let mainHeadings = document.querySelectorAll('h4')
-for (let i = 0; i < mainHeadings.length; i++) {
-  mainHeadings[i].textContent = siteContent["main-content"][i]
-}
+// for (let i = 0; i < mainHeadings.length; i++) {
+//   mainHeadings[i].textContent = siteContent["main-content"][i]
+// }
+
+
 
 // Contact section
 

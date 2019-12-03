@@ -40,3 +40,73 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Nav
+
+let links = document.querySelectorAll('a');
+links.forEach((link, i) => {
+  link.textContent = Object.values(siteContent.nav)[i]
+  link.style.color = "green"
+})
+
+const newLink1 = document.createElement('a')
+newLink1.textContent = "Home"
+newLink1.style.color = "green"
+
+const nav = document.querySelector("nav")
+nav.prepend(newLink1)
+
+const newLink2 = document.createElement('a')
+newLink2.textContent = "Pricing"
+newLink2.style.color = "green"
+
+nav.append(newLink2)
+
+
+// CTA
+let ctaImg = document.getElementById("cta-img")
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+let title = document.querySelector('h1')
+title.textContent = siteContent["cta"]["h1"]
+
+
+
+
+let button = document.querySelector('button')
+button.textContent = siteContent["cta"]["button"]
+
+
+// Main Content
+let middleImg = document.getElementById("middle-img")
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let mainHeadings = document.querySelectorAll('h4')
+mainHeadings[0].textContent = siteContent["main-content"]["features-h4"]
+mainHeadings[1].textContent = siteContent["main-content"]["about-h4"]
+mainHeadings[2].textContent = siteContent["main-content"]["services-h4"]
+mainHeadings[3].textContent = siteContent["main-content"]["product-h4"]
+mainHeadings[4].textContent = siteContent["main-content"]["vision-h4"]
+// for (let i = 0; i < mainHeadings.length; i++) {
+//   mainHeadings[i].textContent = siteContent["main-content"][i]
+// }
+console.log(mainHeadings)
+let mainParagraphs = document.querySelectorAll('p')
+mainParagraphs[0].textContent = siteContent["main-content"]["features-content"]
+mainParagraphs[1].textContent = siteContent["main-content"]["about-content"]
+mainParagraphs[2].textContent = siteContent["main-content"]["services-content"]
+mainParagraphs[3].textContent = siteContent["main-content"]["product-content"]
+mainParagraphs[4].textContent = siteContent["main-content"]["vision-content"]
+
+
+// Contact section
+mainHeadings[5].textContent = siteContent["contact"]["contact-h4"]
+mainParagraphs[5].textContent = siteContent["contact"]["address"]
+mainParagraphs[6].textContent = siteContent["contact"]["phone"]
+mainParagraphs[7].textContent = siteContent["contact"]["email"]
+
+mainParagraphs[5].style.width = "25%";
+
+// Footer section
+let footer = document.querySelector('footer')
+footer.textContent = siteContent["footer"]["copyright"]
